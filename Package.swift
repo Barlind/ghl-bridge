@@ -13,6 +13,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", .upToNextMajor(from: "1.2.2")),
         .package(url: "https://github.com/mxcl/Chalk", .upToNextMajor(from: "0.5.0")),
+        .package(url: "https://github.com/jpsim/Yams.git", from: "5.0.5")
     ],
     targets: [
         .executableTarget(
@@ -20,6 +21,7 @@ let package = Package(
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "Chalk", package: "Chalk"),
+                .product(name: "Yams", package: "Yams")
                 ],
             linkerSettings: [
                 .unsafeFlags([
